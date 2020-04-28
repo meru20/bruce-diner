@@ -1,16 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import AppNavigator from './navigation/AppNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
+import AppNavigator from './navigation/AppNavigator';
 
 export default function App() {
   return (
-    <NavigationContainer>
+   <NavigationContainer>
     <AppNavigator />
   </NavigationContainer>
-   // <View style={styles.container}>
-   //   <Text>Open up App.js to start kworking on your app!</Text>
-   // </View>
+   /* <View style={styles.container}>
+      <Text>Open up App.js to start kworking on your app!</Text>
+    </View>*/
   );
 }
 

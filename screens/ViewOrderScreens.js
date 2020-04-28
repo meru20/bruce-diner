@@ -3,19 +3,20 @@ import { Text, View, StyleSheet, FlatList, TouchableOpacity } from 'react-native
 import {Menu} from '../data/dummy_data';
 
 const ViewScreen = props =>{
-    const renderOrders= itemData => {
-
-    }
+    //const renderOrders= itemData => {
+//
+    //}
    // <View style={styles.container}>
-         // <Text>this is view screen!</Text>
+         // <Text>this is view screen!</Text></View>
 
-         return (
-            <ListView
+         return ( <View style={styles.container}>
+           <Text>this is view screen!</Text></View>
+           /* <ListView
               style={styles.container}
               dataSource={this.state.dataSource}
               renderRow={(data) => <Row {...data} />}
               renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
-            />
+            />*/
 // {MenuId: itemData.item.id, title: itemData.item.title}
     
     );

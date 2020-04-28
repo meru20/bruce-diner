@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, TouchableOpacity } from 'react-native';
-import { Button } from 'react-native-elements';
+
 
 
 const OrderScreen = props =>{
@@ -9,7 +9,7 @@ return (
       <Text>I would like to order ...</Text>
       <Text>drop down list</Text>
       <Button
-          title="Press order it!"
+          title="order it!"
           onPress={() => 
             props.navigation.navigate("view")}
         />
