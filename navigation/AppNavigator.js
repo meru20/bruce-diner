@@ -8,6 +8,7 @@ import OrderScreen from '../screens/OrderScreens';
 import ViewScreen from '../screens/ViewOrderScreens';
 import UserScreen from '../screens/UserProfileScreens';
 import Colors from '../constants/colors';
+import SingleOrder from '../screens/SingleOrders';
 
 // initailize my stack
 
@@ -38,6 +39,10 @@ const OrderNavigator =() => {
             <OrderStack.Screen
             name= "user"
             component={UserScreen}
+            />
+            <OrderStack.Screen
+            name= "your order"
+            component={SingleOrder}
             />
         </OrderStack.Navigator>
     )
