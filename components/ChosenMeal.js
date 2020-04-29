@@ -1,20 +1,17 @@
 import React from 'react';
-import { View , Text , StyleSheet , TouchableOpacity} from 'react-native';
+import { View , Text , StyleSheet , Button, TouchableOpacity} from 'react-native';
 
 
-const ChosenMeal = props => {
+const ChosenCard = props => {
     return (
-        <View>
-            <TouchableOpacity onPress = {props.goToSingleOrder}>
-                <View style={StyleSheet.titleContainer}>
-                    <Text>{props.orderData.title}</Text>
 
-                </View>
-            </TouchableOpacity>
-            </View>
-
-
-    );
+        <View style={styles.titleContainer}>
+            <Text> {props.title}</Text>
+            <Button title= "order it!"
+            onPress={props.onPress}
+            />
+        </View>
+       );
 };
 
 const styles = StyleSheet.create({
@@ -22,7 +19,15 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0,0,0,0.5)',
         paddingVertical: 5,
         paddingHorizontal: 12,
-    }
+    },
+    mealItem: {
+        height: 150,
+        width: '100%',
+        backgroundColor: '#dcdcdc',
+        marginBottom: 15,
+        borderRadius: 10,
+        overflow: 'hidden',
+      },
       });
 
-      export default ChosenMeal;
+      export default ChosenCard;

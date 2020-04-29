@@ -1,11 +1,29 @@
 import React from 'react';
-import { Text, View, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
-
+import { Text, View, StyleSheet, FlatList, Button, TouchableOpacity } from 'react-native';
+import { Menu } from '../data/dummy_data';
+import ChosenCard from '../components/ChosenMeal';
+import GridTile from '../components/GridTile';
 
 const SingleOrder = props =>{
-    return (
+ // const orderId= props.route.params.menuId;
+  const ord = Menu.find (ord =>{
+    return ord.id === props.route.params.menuId;
+
+  })
+  
+ return (
     <View style={styles.container}>
-          <Text>this is single order screen!</Text>
+      
+          <Text>{props.route.params.title}</Text>
+          <Button
+          title="order it!"
+          onPress={() => //Alert.alert('Simple Button pressed')
+          props.navigation.navigate('view',{
+            menuId,
+            title
+          })
+        }
+        />
         </View>
       );
     }
@@ -16,6 +34,14 @@ const SingleOrder = props =>{
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+      },
+      mealItem: {
+        height: 150,
+        width: '100%',
+        backgroundColor: '#dcdcdc',
+        marginBottom: 15,
+        borderRadius: 10,
+        overflow: 'hidden',
       },
     });
     
