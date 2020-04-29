@@ -3,10 +3,11 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const GridTile = props => {
   return (
-    <View style={styles.gridItems}>
-      <TouchableOpacity style={{ flex: 1 }} onPress={props.onSelect}>
+    <View style={styles.mealItem}>
+      <TouchableOpacity style={styles.card} 
+      onPress={props.onSelect}>
         <View
-          style={{ ...styles.container, ...{ backgroundColor: props.colors } }}>
+          style={styles.container }>
           <Text style={styles.title}>{props.title}</Text>
         </View>
       </TouchableOpacity>
@@ -15,6 +16,14 @@ const GridTile = props => {
 };
 
 const styles = StyleSheet.create({
+  mealItem: {
+    height: 150,
+    width: '100%',
+    backgroundColor: '#dcdcdc',
+    marginBottom: 15,
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
   gridItems: {
     flex: 1,
     margin: 15,
@@ -37,8 +46,16 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 22,
-    color: '#333',
-    textAlign: 'right',
+    color: '#eee',
+    
+  },
+  card: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#333',
+    margin: 10,
+    padding: 20,
   },
 });
 
